@@ -1,0 +1,119 @@
+{
+  "project_name": "FastMoss Frontend",
+  "role_hint": "Senior Frontend Engineer",
+  "stack": [
+    "Next.js 14",
+    "React 18",
+    "TypeScript",
+    "next-intl",
+    "Zustand",
+    "react-query",
+    "ahooks",
+    "Ant Design",
+    "HeroUI",
+    "ECharts"
+  ],
+  "scale_snapshot": {
+    "core_files_count": 2815,
+    "app_tsx_files_count": 1585,
+    "server_domain_modules_count": 38,
+    "router_rules_count": 133,
+    "locales_count": 11,
+    "en_message_keys_count": 4979
+  },
+  "highlight_evidence": [
+    {
+      "theme": "Routing governance",
+      "summary": "Large-scale App Router with static/dynamic route matching and locale-aware 404 fallback",
+      "files": ["app/router.ts", "middleware.ts"]
+    },
+    {
+      "theme": "I18n + region strategy",
+      "summary": "Middleware-driven locale handling, region validation, and mobile redirect mapping",
+      "files": [
+        "middlewares/intl.ts",
+        "middlewares/custom.ts",
+        "middlewares/redictor.ts",
+        "middlewares/utils/regionValidator.ts",
+        "i18n/request.ts"
+      ]
+    },
+    {
+      "theme": "SSR/CSR unified request layer",
+      "summary": "Axios interceptors unify cookies/headers/signing and server-side host checks",
+      "files": ["utils/axios.ts", "utils/cryptParams.ts", "utils/cryptParams.client.ts"]
+    },
+    {
+      "theme": "Global payment orchestration",
+      "summary": "Region-aware payment channels and order polling with post-payment user state refresh",
+      "files": [
+        "common/payment.ts",
+        "app/[locale]/(normalLayout)/pay/order/page.tsx",
+        "app/[locale]/(normalLayout)/pay/check/page.tsx",
+        "app/[locale]/(normalLayout)/paySea/order/page.tsx",
+        "app/[locale]/(normalLayout)/paySea/check/page.tsx"
+      ]
+    },
+    {
+      "theme": "Permission and state consistency",
+      "summary": "Permission code mapping + persisted auth store + visibility-based login recheck",
+      "files": [
+        "hooks/use-checkPermission/use-checkPermission.tsx",
+        "store/use-user-info.ts",
+        "store/provider.tsx",
+        "store/payUserInfoStore.ts"
+      ]
+    },
+    {
+      "theme": "Growth analytics",
+      "summary": "Centralized tracking dispatcher for Google/Facebook/Bing/TikTok/Reddit/LinkedIn",
+      "files": ["utils/track/index.ts", "utils/track/GoogleTrack.ts", "utils/track/FbTrack.ts"]
+    },
+    {
+      "theme": "Bundle and build optimization",
+      "summary": "Custom splitChunks strategy and production behavior tuning",
+      "files": ["next.config.mjs"]
+    }
+  ],
+  "hard_problems": [
+    {
+      "problem": "Combinational complexity across locale/region/device routing",
+      "approach": "Centralized matcher + strategy-based region validator + detail-page redirect rules"
+    },
+    {
+      "problem": "Payment status consistency across async systems",
+      "approach": "Polling + result reconciliation + concurrent user/pay state refresh"
+    },
+    {
+      "problem": "SSR/CSR request context mismatch",
+      "approach": "Single interceptor abstraction for cookies, locale, region, signature, and host security checks"
+    }
+  ],
+  "resume_bullet_templates_zh": [
+    "主导 Next.js 14 多业务域平台前端架构，治理 {router_rules_count}+ 路由规则与 {locales_count} 语种国际化链路，建立语言/地区/设备策略化中间件，提升全球站点访问一致性与迭代效率。",
+    "设计 SSR/CSR 一体化请求基础设施，统一签名、地区、语言与来源校验机制，沉淀通用 API 层并降低跨端调用复杂度与接口风险。",
+    "搭建跨区域支付编排能力（PayPal/Stripe/Airwallex/本地钱包），实现订单轮询与用户权益同步闭环，支撑多市场商业化支付路径。",
+    "构建多平台增长埋点聚合层（Google/Facebook/Bing/TikTok/Reddit/LinkedIn），统一注册/试用/支付事件标准，提升投放归因与增长实验可观测性。",
+    "基于 splitChunks 制定分包策略并优化生产构建行为，降低关键页面资源负载并改善前端性能与发布稳定性。"
+  ],
+  "resume_bullet_templates_en": [
+    "Led the frontend architecture of a large Next.js 14 analytics platform, governing {router_rules_count}+ route rules and {locales_count} locales via middleware-driven locale/region/device policies.",
+    "Designed a unified SSR/CSR request infrastructure with signing, locale/region headers, and source validation, reducing cross-runtime API inconsistency and integration risk.",
+    "Implemented region-aware payment orchestration (PayPal/Stripe/Airwallex/local wallets) with order polling and post-payment entitlement synchronization across user states.",
+    "Built a centralized growth tracking dispatcher across Google/Facebook/Bing/TikTok/Reddit/LinkedIn, standardizing conversion events for attribution and experiment analysis.",
+    "Optimized bundle strategy through custom splitChunks and production build tuning, improving loading efficiency and release reliability for a large-scale web app."
+  ],
+  "risk_and_debt_signals": [
+    "Type checking is not blocking production build (typescript.ignoreBuildErrors = true).",
+    "Automated test coverage appears limited; only a small number of test files were found."
+  ],
+  "metric_placeholders_to_fill": [
+    "DAU/MAU",
+    "Payment conversion rate uplift",
+    "Checkout success rate",
+    "P95 page load time reduction",
+    "Bundle size reduction",
+    "Production incident rate",
+    "Release frequency"
+  ]
+}
