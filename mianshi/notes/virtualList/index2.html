@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>可变高度虚拟列表 Demo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 16px;
+      }
+      h1 {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      .hint {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 12px;
+      }
+      .virtual-list-container {
+        width: 100%;
+        max-width: 520px;
+        height: 520px;
+        position: relative;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        overflow: auto;
+        background: #fafafa;
+      }
+      .virtual-list-phantom {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        visibility: hidden;
+      }
+      .virtual-list {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+      }
+      .virtual-list-item {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 8px 12px;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        line-height: 1.5;
+        word-break: break-all;
+      }
+      .virtual-list-item:nth-child(odd) {
+        background: #f7f9fc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>不固定高度虚拟列表（前缀和 + 二分查找）</h1>
+    <p class="hint">
+      每条高度随机 40–160px；prefixSum[i] 为第 i 条顶部偏移；根据 scrollTop 与视口高度算出可见区间，只挂载可见 DOM。
+    </p>
+    <div class="virtual-list-container" id="container">
+      <div class="virtual-list-phantom" id="phantom"></div>
+      <div class="virtual-list" id="list"></div>
+    </div>
+
+    <script>
+      const TOTAL = 5000;
+      const MIN_H = 40;
+      const MAX_H = 160;
+      const BUFFER = 8; // 上下多渲染几条，减少快速滚动白屏
+
+      const container = document.getElementById("container");
+      const phantom = document.getElementById("phantom");
+      const list = document.getElementById("list");
+
+      /** 每条高度（演示：随机；真实场景可由服务端下发或首次渲染后测量回写） */
+      const heights = Array.from({ length: TOTAL }, () =>
+        Math.floor(MIN_H + Math.random() * (MAX_H - MIN_H + 1))
+      );
+
+      /** prefixSum[i] = 第 i 条顶部的 Y；prefixSum[0]=0；长度 TOTAL+1 */
+      const prefixSum = new Array(TOTAL + 1);
+      prefixSum[0] = 0;
+      for (let i = 0; i < TOTAL; i++) {
+        prefixSum[i + 1] = prefixSum[i] + heights[i];
+      }
+
+      const totalHeight = prefixSum[TOTAL];
+
+      /**
+       * 第一个满足「条 i 的底边 > scrollTop」的 i，即与视口上沿可能相交的第一条
+       * 等价：最小的 i 使得 prefixSum[i+1] > scrollTop
+       */
+      function findStartIndex(scrollTop) {
+        let lo = 0;
+        let hi = TOTAL;
+        while (lo < hi) {
+          const mid = (lo + hi) >> 1;
+          if (prefixSum[mid + 1] <= scrollTop) lo = mid + 1;
+          else hi = mid;
+        }
+        return lo;
+      }
+
+      function render() {
+        const scrollTop = container.scrollTop;
+        const viewH = container.clientHeight;
+        /** 与视口相交判定 + 上下 overscan（像素），减少快速滚动白屏 */
+        const overscan = 200;
+
+        let start = findStartIndex(scrollTop);
+        start = Math.max(0, start - BUFFER);
+
+        const fragment = document.createDocumentFragment();
+        for (let i = start; i < TOTAL; i++) {
+          const top = prefixSum[i];
+          const bottom = prefixSum[i + 1];
+          if (top >= scrollTop + viewH + overscan) break;
+          if (bottom <= scrollTop - overscan) continue;
+
+          const el = document.createElement("div");
+          el.className = "virtual-list-item";
+          el.style.top = `${top}px`;
+          el.style.height = `${heights[i]}px`;
+          el.textContent = `#${i} · height=${heights[i]}px · top=${top}px`;
+          fragment.appendChild(el);
+        }
+
+        list.replaceChildren(fragment);
+      }
+
+      phantom.style.height = `${totalHeight}px`;
+      container.addEventListener("scroll", () => requestAnimationFrame(render), { passive: true });
+      window.addEventListener("resize", render);
+      render();
+    </script>
+  </body>
+</html>

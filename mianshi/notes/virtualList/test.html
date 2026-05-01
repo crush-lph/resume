@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .virtual-list-container {
+        width: 500px;
+        height: 600px;
+        margin: 0 auto;
+        position: relative;
+        overflow: auto;
+      }
+
+      .virtual-list-phantom {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: transparent;
+      }
+      .virtual-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="virtual-list-container">
+      <div class="virtual-list-phantom"></div>
+      <div class="virtual-list"></div>
+    </div>
+  </body>
+
+  <script>
+    const itemClassName = "virtual-list-item";
+
+    const container = document.querySelector(".virtual-list-container");
+    const phantom = document.querySelector(".virtual-list-phantom");
+    const list = document.querySelector(".virtual-list");
+
+    // 窗口高度
+    const containerHeight = container.clientHeight;
+    const itemHeight = 50;
+
+    const total = 1000;
+    const listData = Array.from({ length: total }, (_, index) => index);
+
+    const visibleCount = Math.ceil(containerHeight / itemHeight);
+
+    let start = 0;
+    let end = start + visibleCount;
+
+    let visibleData = listData.slice(start, end);
+
+    phantom.style.height = `${total * itemHeight}px`;
+
+    const renderList = () => {
+      const fragment = document.createDocumentFragment();
+
+      for (let i = 0; i < visibleData.length; i++) {
+        const item = document.createElement("div");
+        item.className = itemClassName;
+        item.style.width = "100%";
+        item.style.height = `${itemHeight}px`;
+        item.style.background = `#ccc`;
+        item.style.border = `1px solid #1f283c`;
+
+        item.textContent = visibleData[i];
+        fragment.appendChild(item);
+      }
+
+      list.replaceChildren(fragment);
+    };
+
+    const scrollHandler = () => {
+      const scrollTop = container.scrollTop;
+      start = Math.floor(scrollTop / itemHeight);
+      end = start + visibleCount;
+      visibleData = listData.slice(start, end);
+      list.style.transform = `translate3d(0, ${scrollTop - (scrollTop % itemHeight)}px, 0)`;
+      renderList();
+    };
+
+    container.addEventListener("scroll", scrollHandler);
+
+    renderList();
+  </script>
+</html>
