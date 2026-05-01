@@ -13,6 +13,7 @@
 5. [面试回答模板](./04-answer-templates.md)
 6. [纠错与审核清单](./05-review-checklist.md)
 7. [阿里 AI 前端面试题与参考答案](./06-ali-ai-frontend-qa.md)
+8. [项目亮点与综合能力](./07-project-highlights.md)
 
 ## 复习原则
 

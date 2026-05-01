@@ -29,11 +29,14 @@
 必须掌握：
 
 - 企业级 AI Chat 桌面端架构
+- 从 0 到 1 设计项目架构
+- 支付系统策略模式抽象
 - Prompt Injection 防护
 - Electron 与 Tauri 选型
 - 本地存储与安全
 - 模型 Provider 抽象
 - AI Agent 对前端开发模式的影响
+- Vibe Coding 在团队内落地
 
 ## 优先级
 
@@ -60,9 +63,13 @@
 - Prompt Injection
 - AI Agent
 - AI 组件库质量评估
+- 支付系统设计
+- Vibe Coding 团队落地
+- 从 0 到 1 项目架构设计
 
 ## 公司题单
 
 已整理：
 
 - [阿里 AI 前端面试题与参考答案](./06-ali-ai-frontend-qa.md)
+- [项目亮点与综合能力](./07-project-highlights.md)
