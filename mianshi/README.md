@@ -35,6 +35,12 @@
 
 ## 快速导航
 
+### 0. 项目级 Skill
+
+- [.agents/skills/interview-notes/SKILL.md](/Users/lipenghu/Desktop/hulia/resume/.agents/skills/interview-notes/SKILL.md)
+  - 核心内容：面经产出项目级 Skill，定义公司面经、考点专题、实操口径、索引维护的统一流程。
+  - 适用场景：后续新增面经、补充题目、维护考点专题、整理高频复习资产。
+
 ### 1. 商汤专项
 
 - [商汤高频题清单.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/商汤高频题清单.md)
@@ -54,6 +60,10 @@
 - [interviews/加和科技一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/加和科技一面.md)
   - 核心内容：超长上下文 Agent 前端优化、可观测、录制方案、Agent 指标体系、AI 全栈工程师理解、从 0 到 1 项目设计、Vibe Coding 大型项目落地注意点。
   - 适用场景：AI 前端、对话式 Agent、可观测性和多媒体能力相关面试。
+
+- [interviews/数字100复试.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/数字100复试.md)
+  - 核心内容：Cursor / Claude Code / Codex 工具差异、Skill 设计、Skill 确定性、Skill 组合调用、AI 工程思考。
+  - 适用场景：AI 工具链、Skill 设计、Agent 工作流、AI 方法论相关面试。
 
 - [interviews/面经输出模板.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/面经输出模板.md)
   - 核心内容：统一的面经沉淀格式，包括关键考点、注意点、可能追问、可背答案。
@@ -177,6 +187,7 @@
 - [interviews/商汤科技一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/商汤科技一面.md)
 - [interviews/商汤科技二三四五面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/商汤科技二三四五面.md)
 - [interviews/加和科技一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/加和科技一面.md)
+- [interviews/数字100复试.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/数字100复试.md)
 
 ### 项目 2 分钟介绍 / 项目深挖
 
