@@ -30,6 +30,7 @@
 按顺序看：
 
 - [knowledge-base/README.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/README.md)
+- [算法速成题单.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/算法速成题单.md)
 - [14天复习计划.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/14天复习计划.md)
 - [14天复习计划答案.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/14天复习计划答案.md)
 
@@ -70,6 +71,18 @@
   - 适用场景：后续新增任何面经时作为标准模板使用。
 
 ### 1.2 React / 工程化专项
+
+- [interviews/才博教育一二三面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/才博教育一二三面.md)
+  - 核心内容：JavaScript 基础、React Hooks、倒计时、Taro 与小程序、Undo/Redo、Promise、架构排障、TypeScript、表单设计、AI 代码治理、三面软素质题。
+  - 适用场景：综合型前端面试、项目深挖后继续追基础与工程设计的场景。
+
+- [interviews/AfterShip一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/AfterShip一面.md)
+  - 核心内容：增长前端、Umi 到 Next.js 重构、SEO ROI、indexed page 未收录原因、关键词优化、留存漏斗、AB 测试推进。
+  - 适用场景：增长前端、SEO 增长、重构 ROI、数据驱动优先级相关面试。
+
+- [interviews/健康界一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/健康界一面.md)
+  - 核心内容：性能优化、Next.js 部署模式、负载均衡、SDD 规格驱动开发、Vibe Coding Harness Engineering。
+  - 适用场景：Next.js 生产部署、前端性能治理、AI 编程工程化、Vibe Coding 质量护栏相关面试。
 
 - [interviews/爱快路由一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/爱快路由一面.md)
   - 核心内容：项目底层难点、Vibe Coding 最佳实践、Zustand 底层、性能优化、移动端适配、React 渲染流程、Diff、优先级、并发渲染、模块数据隔离。
@@ -135,6 +148,10 @@
 
 ### 5. 复习计划与答案
 
+- [算法速成题单.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/算法速成题单.md)
+  - 核心内容：7 天速成题单、14 天冲刺题单、题型到题目的最短映射。
+  - 适用场景：准备算法专项、临时补算法、按天刷 LeetCode。
+
 - [14天复习计划.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/14天复习计划.md)
   - 核心内容：两周节奏的复习安排。
   - 适用场景：按天推进，控制复习范围。
@@ -155,6 +172,7 @@
 
 优先看：
 
+- [interviews/才博教育一二三面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/才博教育一二三面.md)
 - [interviews/商汤科技二三四五面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/商汤科技二三四五面.md)
 - [interviews/商汤科技一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/商汤科技一面.md)
 - [interviews/爱快路由一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/爱快路由一面.md)
@@ -164,6 +182,8 @@
 
 优先看：
 
+- [interviews/AfterShip一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/AfterShip一面.md)
+- [interviews/健康界一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/健康界一面.md)
 - [interviews/商汤科技一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/商汤科技一面.md)
 - [interviews/商汤科技二三四五面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/商汤科技二三四五面.md)
 - [knowledge-base/07-project-highlights.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/07-project-highlights.md)
@@ -181,6 +201,7 @@
 
 优先看：
 
+- [interviews/健康界一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/健康界一面.md)
 - [knowledge-base/02-ai-frontend.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/02-ai-frontend.md)
 - [knowledge-base/03-architecture-security.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/03-architecture-security.md)
 - [knowledge-base/07-project-highlights.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/07-project-highlights.md)
