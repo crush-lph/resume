@@ -72,6 +72,14 @@
 
 ### 1.2 React / 工程化专项
 
+- [interviews/上海元符号一面问题.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/上海元符号一面问题.md)
+  - 核心内容：上海元符号一面录音问题提取，包含负责人经历、Umi 到 Next、AI 仓库学习助手、LangGraph/Agent、Skill、Vibe Coding、SSE、性能优化、权限和支付。
+  - 适用场景：AI 全栈 / Agent 工程化方向面试复盘，尤其适合复盘“项目主导能力”和“AI 实操深度”。
+
+- [interviews/社保卡一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/社保卡一面.md)
+  - 核心内容：社保卡一面复盘，包含部署缓存、Tree Shaking、Vue 3、Webpack/Vite、Webpack 优化、微前端、TypeScript、接口签名、AI 工具。
+  - 适用场景：Vue / 工程化 / 微前端 / TypeScript 基础与项目追问复盘。
+
 - [interviews/才博教育一二三面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/才博教育一二三面.md)
   - 核心内容：JavaScript 基础、React Hooks、倒计时、Taro 与小程序、Undo/Redo、Promise、架构排障、TypeScript、表单设计、AI 代码治理、三面软素质题。
   - 适用场景：综合型前端面试、项目深挖后继续追基础与工程设计的场景。
@@ -201,6 +209,7 @@
 
 优先看：
 
+- [interviews/上海元符号一面问题.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/上海元符号一面问题.md)
 - [interviews/健康界一面.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/interviews/健康界一面.md)
 - [knowledge-base/02-ai-frontend.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/02-ai-frontend.md)
 - [knowledge-base/03-architecture-security.md](/Users/lipenghu/Desktop/hulia/resume/mianshi/knowledge-base/03-architecture-security.md)

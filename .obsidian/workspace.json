@@ -4,17 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "2efe19b0fb2d5a49",
+        "id": "43456aee99725a62",
         "type": "tabs",
         "children": [
           {
-            "id": "b33a38f7c0d7d2d6",
+            "id": "70afbe94319bcb97",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "bases",
+              "state": {
+                "file": "未命名 1.base",
+                "viewName": "表格"
+              },
+              "icon": "lucide-table",
+              "title": "未命名 1"
             }
           }
         ]
@@ -30,19 +33,6 @@
         "id": "732378514009f4ab",
         "type": "tabs",
         "children": [
-          {
-            "id": "4555c039dc960567",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "文件列表"
-            }
-          },
           {
             "id": "6c8255506936aad2",
             "type": "leaf",
@@ -176,21 +166,36 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b33a38f7c0d7d2d6",
+  "active": "70afbe94319bcb97",
   "lastOpenFiles": [
-    "项目难点.md",
-    "能力概述.md",
-    "未命名.base",
-    "未命名.canvas",
+    "未命名 1.base",
+    "ai-guide.md",
+    "fastmoss-intro/README.md",
+    "未命名",
     "figma-make.md",
+    "未命名.base",
+    "未命名.md",
+    "李鹏虎-React-Next前端工程师-2页投递版.md",
+    "wiki-notebook/index.md",
+    "知识库.md",
+    "项目难点.md",
+    "项目经历.md",
     "未命名 1.canvas",
+    "未命名.canvas",
+    "mianshi/interviews/商汤科技一面.md",
+    "mianshi/interviews/社保卡一面.md",
+    "2026-05-20.md",
+    "wiki-notebook/README.md",
+    "改写对照表.md",
+    "README.md",
+    "README1.md",
+    "能力概述.md",
     "2026-04-23.md",
     "wiki-notebook/TheSchema.md.md",
     "wiki-notebook/README.md.md",
     "wiki-notebook/wiki",
     "未命名 1",
     "wiki-notebook/raw",
-    "wiki-notebook/未命名文件夹/未命名",
-    "未命名"
+    "wiki-notebook/未命名文件夹/未命名"
   ]
 }
